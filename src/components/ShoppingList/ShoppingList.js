@@ -1,4 +1,3 @@
-
 import { plantList } from '../../datas/plantList'
 import PlantItem from '../PlantItem/PlantItem'
 import '../ShoppingList/ShoppingList.css'
@@ -20,6 +19,7 @@ function ShoppingList() {
 			<ul className='lmj-plant-list'>
 				{plantList.map(({ id, cover, name, water, light }) => (
 					<PlantItem
+						key={id}  // Ajoutez une clé unique ici
 						id={id}
 						cover={cover}
 						name={name}
